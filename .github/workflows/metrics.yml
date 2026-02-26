@@ -1,0 +1,36 @@
+name: Metrics
+on:
+  # Agenda a atualização para todo dia à meia-noite
+  schedule: [{cron: "0 0 * * *"}]
+  # Permite que você rode manualmente para testar
+  workflow_dispatch:
+  # Atualiza sempre que você fizer um push no main
+  push: {branches: ["master", "main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Aqui ele usa o Secret que você criou!
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Configurações básicas
+          user: DanAraujo1001
+          template: classic
+          base: header, community, repositories, metadata
+          config_timezone: America/Sao_Paulo
+
+          # Plugin de Linguagens (substitui bem o GitHub Stats)
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_sections: most-used
+          
+          # Plugin de Hábitos (mostra horários de commit)
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
