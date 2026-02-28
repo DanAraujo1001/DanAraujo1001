@@ -80,7 +80,7 @@ Me chamo Danilo Costa Araujo, tenho 19 anos e sou sergipano. Finalizei meu Ensin
 
 ### 📊 Estatísticas
 
-<p>
+<!-- <p>
   <img 
     align="left" 
     alt="GitHub Stats" 
@@ -96,4 +96,6 @@ Me chamo Danilo Costa Araujo, tenho 19 anos e sou sergipano. Finalizei meu Ensin
       src="https://github-readme-stats.vercel.app/api/top-langs/?username=DanAraujo1001&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
   />
 
-</p>
+</p> -->
+
+![My Metrics](https://raw.githubusercontent.com/DanAraujo1001/DanAraujo1001/main/github-metrics.svg)
